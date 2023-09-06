@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD</title>
+
+    
+    <link rel="stylesheet" href="{% static 'enroll/css/all.mim.js' %}">
+    <link rel="stylesheet" href="{% static 'enroll/css/bootstrap.css' %}">
+
+
+</head>
+<body>
+    <div class="container mt-5">
+        {% block head %}
+        <h2 class="text-center alert alert-danger"> Function Based ModelForm Crud </h2>
+        
+        {% endblock head %}
+        
+        {% if messages  %}
+        
+        {% for message in messages  %}
+        <h4 class="text-center alert alert-info ">{{message}}</h4>
+            
+        {% endfor %}
+            
+            
+        {% endif %}
+    
+        {% block content %}
+        
+        {% endblock content %}
+
+    </div>
+    
+
+
+    <script src="{% static 'enroll/js/all.min.js' %}"></script>
+    <script src="{% static 'enroll/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'enroll/js/jquery.js' %}"></script>
+    <script src="{% static 'enroll/js/popper.js' %}"></script>
+    
+</body>
+</html>
